@@ -19,6 +19,7 @@ int main()
     }
 
     int level = 0;
-    Ship player;
+    Ship player(222, 300);
     player.fire();
+    
 }

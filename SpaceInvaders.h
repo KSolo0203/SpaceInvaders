@@ -46,8 +46,9 @@ class Body
 {
 protected:
     Coordinates coordinates;
-    // std::pair<unsigned short, unsigned short> coordinates;
+
 public:
+    Body() {};
     // virtual void move();
 };
 
@@ -56,9 +57,9 @@ class Ship : public Body
     unsigned short int hit_points;
 
 public:
-    Ship() {};
+    Ship(int _x, int _y) { coordinates.x = _x; coordinates.y = _y; };
     // virtual void fire();
-    void fire() { std::cout << "FIRE!"; }
+    void fire() { std::cout << coordinates.x << " " << coordinates.y; }
 
 };
 
@@ -70,4 +71,6 @@ public:
     {
         coordinates.x++;
     }
+    
+    void fire() { std::cout << coordinates.x << " " << coordinates.y; }
 };
